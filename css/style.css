@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins",sans-serif;
+}
+/* Mise en forme du header */
+header {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* mise en forme de ma barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  margin: 0 auto;
+}
+/* Mise en forme du logo */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo img {
+    width: 35%;
+    height: auto;
+}
+/* Lien de navigation */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Effet de survole sur le lien */
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Styles de base pour le Hero */
+.hero {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem; /* Taille imposante pour le nom */
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  animation: fadeInDown 0.8s ease-out; /* Animation à l'apparition */
+}
+  
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #cccccc; /* Gris clair pour le sous-titre */
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animations simples */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mise en forme des skills */
+.skills-section {
+    padding: 100px 5%;
+    background-color: #2a2a2a; /* Même fond que le Hero pour la continuité */
+    text-align: center;
+    color: white;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: #2a2a2a;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #cccccc;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Effet au survol (Hover) */
+.skill-card:hover {
+    background: #007BFF; /* Change de couleur au survol */
+    color: white;
+    transform: translateY(-5px); /* Petit saut vers le haut */
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.2);
+    border-color: #007BFF;
+}
+
+/* Mise en forme de la section projet */
+.projects-section {
+    padding: 100px 5%;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #2a2a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #007BFF;
+}
+
+/* Zone d'icône ou d'image */
+.project-image {
+    height: 180px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #007BFF;
+    background: linear-gradient(45deg, #2a2a2a, #333);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: white;
+}
+
+/* Style des Tags (R, SQL, etc.) */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: #007BFF;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.project-info p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+}
+
+/* Boutons GitHub */
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-project {
+    text-decoration: none;
+    color: white;
+    background: #444;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.btn-project:hover {
+    background: #007BFF;
+}
+.contact-section {
+    padding: 100px 5%;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Formulaire centré */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Aligne les labels à gauche */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Styles des Labels */
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #007BFF; /* Rappel de la couleur d'accent */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styles des Champs (Input & Textarea) */
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: white;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Effet focus (clic dans le champ) */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.2);
+}
+
+/* Bouton d'envoi */
+.btn-submit {
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+
+}
+
+.btn-submit:hover {
+    background: #007BFF;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.main-footer {
+    background-color: #ffffff; /* Un peu plus sombre que les sections précédentes */
+    padding: 60px 5% 20px 5%;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #007BFF; /* Le point rouge signature */
+}
+
+.footer-content p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Liens Sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    background: #2a2a2a;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #007BFF;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+}
+
+/* Barre de Copyright */
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #555;
+}
+/* --- RESPONSIVITÉ GLOBALE --- */
+
+
+
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    header {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .nav-links {
+        display: flex; /* On les réaffiche mais en ligne simple ou colonne */
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Projets */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        max-width: 500px;
+    }
+
+    /* Compétences */
+    .skill-card {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+                <div class="logo">
+                    <a href="#welcome">
+                        <img src="img/img.png" alt="Freid AGNONTCHEME" class="logo-img">
+                    </a> 
+                </div>
+            <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section home -->
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Freid AGNONTCHEME</h1>
+            <p>Data Scientist & Software Developper</p>
+        </div>
+    </section>
+
+    <!-- Section Skills -->
+
+    <section id="Skills" class="skills-section">
+        <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">R</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">SQL</div>
+            </div>
+    </section>
+
+    <!-- Sections Project -->
+
+       <section id="Projects" class="projects-section">
+            <div class="projects-container">
+            <h2>My Project</h2>
+            <div class="projects-grid">
+            
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-chart-line"></i> <!-- Ou une image réelle -->
+                </div>
+                <div class="project-info"> 
+                    <h3>Analyse d'un dataset de la finance</h3>
+                    <div class="tags">
+                        <span class="tag">R</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                    <p>Ce dataset comprend des données de ventes et de profits, classées par segment de marché et par pays ou région.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/FreidCoders/analysis-financials" class="btn-project"><i class="fab fa-github"></i> Code</a>
+                       <!-- <a href="#" class="btn-project outline">Démo <i class="fas fa-external-link-alt"></i></a>-->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-info">
+                    <h3>Création d'une base de Donné Book</h3>
+                    <div class="tags">
+                        <span class="tag">SQL</span>
+                    </div>
+                    <p>Elaboration du modèle Physique de donné</p>
+                    <div class="project-links">
+                        <a href="https://github.com/FreidCoders/learn_sql/tree/main/book" class="btn-project"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <label for="Nom">Nom Complet</label>
+                <input type="text" placeholder="Votre Nom" required id="Nom">
+                <label for="Email">Adresse Email</label>
+                <input type="email" placeholder="Votre Email" id="Email" required>
+                <label for="Sujet">Sujet</label>
+                <input type="text" placeholder="Sujet" required id="Sujet">
+                <textarea placeholder="Votre Message" rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </section> 
+
+        <footer class="main-footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://github.com/FreidCoders" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/freid-agnontcheme-486981398" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:freidagnontcheme@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Freid AGNONTCHEME. Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>
+</html>
