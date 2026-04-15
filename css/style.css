@@ -88,7 +88,6 @@ header {
   font-weight: 300;
   color: #cccccc; /* Gris clair pour le sous-titre */
   margin-bottom: 30px;
-  animation: fadeInUp 1s ease-out;
 }
 
 /* Animations simples */
