@@ -9,8 +9,9 @@ body {
 }
 /* Mise en forme du header */
 header {
-  width: 100%;
-  position: relative;
+  position: sticky; /* Active le collage */
+  top: 0;           /* Indique où se coller */
+  z-index: 1000; 
   background-color: #ffffff;  
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -405,11 +406,21 @@ header {
     /* Navbar */
     header {
         display: flex;
+        flex-direction:column;
         width: 100%;
         height: auto;
         padding: 0 10px;
     }
-
+    .profile-img {
+        
+    width: 250px;           
+    height: 250px;          
+    border-radius: 50%;     
+    object-fit: cover;   
+    border: 3px solid #fff; 
+    margin-bottom: 20px;    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    }
     .nav-links {
         display: flex; /* On les réaffiche mais en ligne simple ou colonne */
         flex-wrap: wrap;
@@ -447,20 +458,40 @@ header {
     }
 }
 
-
-@media screen and (max-width: 480px) {
-    header {
+@media screen and (max-width: 380px) {
+    /* On centre tout le contenu du header */
+    .navbar{
         display: flex;
-        width: 100%;
-        height: auto;
-        padding: 0 10px;
-    }
-    .hero-content h1 {
-        font-size: 1.8rem;
+        flex-direction: column; 
+        justify-content: space-between;
+        padding: 1.5rem 10px;
+        gap: 15px; /* Espace entre le logo et les liens */
     }
 
-    .hero-content p {
-        font-size: 1rem;
+    /* Ajustement du logo */
+    .logo img {
+        width: 50px; /* Largeur fixe plus adaptée que 35% */
+        height: auto;
+        
+    }
+
+    /* Alignement des liens de navigation */
+    .nav-links {
+        flex-direction: row; /* Garde les liens côte à côte */
+        justify-content: center;
+        flex-wrap: wrap; /* Permet de passer à la ligne si trop de liens */
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0; /* On retire le margin-left: 2rem d'origine */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
     }
 }
+
 

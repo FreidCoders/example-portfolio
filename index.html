@@ -102,14 +102,14 @@
 
         <section id="Contact" class="contact-section">
             <h2>Contact</h2>
-            <form class="contact-form" method="post">
+            <form class="contact-form" method="post" action="/contact">
                 <label for="Nom">Nom Complet</label>
-                <input type="text" placeholder="Votre Nom" required id="Nom">
+                <input type="text" placeholder="Votre Nom" required id="name" name="name">
                 <label for="Email">Adresse Email</label>
-                <input type="email" placeholder="Votre Email" id="Email" required>
+                <input type="email" placeholder="Votre Email" id="email" required name="email">
                 <label for="Sujet">Sujet</label>
-                <input type="text" placeholder="Sujet" required id="Sujet">
-                <textarea placeholder="Votre Message" rows="5" required></textarea>
+                <input type="text" placeholder="Sujet" required id="subject" name="subject">
+                <textarea placeholder="Votre Message" rows="5" required name="message" id="message"></textarea>
                 <button type="submit" class="btn-submit">Envoyer</button>
             </form>
         </section> 
